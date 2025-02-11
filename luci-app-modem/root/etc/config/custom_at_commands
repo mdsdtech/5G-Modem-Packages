@@ -12,11 +12,11 @@ config custom-commands
 	option command 'AT+CPIN?'
 
 config custom-commands
-	option description '查询网络信号质量（4G） > AT+CSQ'
+	option description '查询网络信号质量 (4G) > AT+CSQ'
 	option command 'AT+CSQ'
 
 config custom-commands
-	option description '查询网络信号质量（5G） > AT+CESQ'
+	option description '查询网络信号质量 (5G) > AT+CESQ'
 	option command 'AT+CESQ'
 
 config custom-commands
