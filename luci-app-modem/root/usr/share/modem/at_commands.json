@@ -45,8 +45,8 @@
 				{"Switch to PCIE communication port > AT+QCFG=\"data_interface\",1,0":"AT+QCFG=\"data_interface\",1,0"},
 				{"View current USB speed > AT+QCFG=\"usbspeed\"":"AT+QCFG=\"usbspeed\""},
 				{"Chnage to USB2.0 speed > AT+QCFG=\"usbspeed\",\"20\"":"AT+QCFG=\"usbspeed\",\"20\""},
-				{"Chnage to USB3.1 Gen1 (5Gbps) speed> AT+QCFG=\"usbspeed\",\"311\"":"AT+QCFG=\"usbspeed\",\"311\""},
-				{"Change to USB3.1 Gen1 (10Gbps) speed> AT+QCFG=\"usbspeed\",\"312\"":"AT+QCFG=\"usbspeed\",\"312\""},
+				{"Chnage to USB3.1 Gen1（5Gbps) speed> AT+QCFG=\"usbspeed\",\"311\"":"AT+QCFG=\"usbspeed\",\"311\""},
+				{"Change to USB3.1 Gen1（10Gbps) speed> AT+QCFG=\"usbspeed\",\"312\"":"AT+QCFG=\"usbspeed\",\"312\""},
 				{"Reset module > AT+QCFG=\"ResetFactory\"":"AT+QCFG=\"ResetFactory\""}
 			],
 			"unisoc":[
