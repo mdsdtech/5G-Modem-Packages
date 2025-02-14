@@ -809,26 +809,22 @@
 		//设置电压状态
 		var state = '';
 		var css = '';
-		if (voltage<3135)
-		{
-			state = "<%:Abnormal%>";
+		if (voltage<3135) {
+			state = "<%:Undervoltage%>";
 			color = "red";
-		}
-		else if (voltage>=3135 && voltage<3700)
-		{
+		}else if (voltage>=3135 && voltage<3240) {
 			state = "<%:Low%>";
 			color = "goldenrod";
-		}
-		else if (voltage>=3700 && voltage<4400) {
-			state = "<%:Normal%>";
+		}else if (voltage>=3240 && voltage<3740) {
+			state = "<%:OK%>";
 			color = "green";
-		}
-		else if (voltage>=4400) {
-			state = "<%:Abnormal%>";
+		}else if (voltage>=3740 && voltage<4400) {
+			state = "<%:High%>";
+			color = "goldenrod";
+		}else if (voltage>=4400) {
+			state = "<%:Overvoltage%>";
 			color = "red";
-		}
-		else
-		{
+		}else {
 			state = "<%:Unknown%>";
 			color = "goldenrod";
 		}
@@ -839,26 +835,22 @@
 		//设置温度状态
 		state = '';
 		css = '';
-		if (temperature<45)
-		{
-			state = "<%:Normal%>";
+		if (temperature<60){
+			state = "<%:OK%>";
 			color = "green";
-		}
-		else if (temperature>=45 && temperature<75)
-		{
-			state = "<%:Somewhat High%>";
+		}else if (temperature>=60 && temperature<68) {
+			state = "<%:High%>";
+			color = "green";
+		}else if (temperature>=68 && temperature<75) {
+			state = "<%:VeryHigh%>";
 			color = "goldenrod";
-		}
-		else if (temperature>=75 && temperature<105) {
-			state = "<%:Excessively High%>";
+		}else if (temperature>=75 && temperature<85) {
+			state = "<%:Degraded%>";
 			color = "red";
-		}
-		else if (temperature>=105) {
-			state = "<%:Abnormal%>";
+		}else if (temperature>=85) {
+			state = "<%:Overheat%>";
 			color = "red";
-		}
-		else
-		{
+		}else {
 			state = "<%:Unknown%>";
 			color = "goldenrod";
 		}
