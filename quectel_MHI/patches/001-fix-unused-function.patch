@@ -1,0 +1,18 @@
+--- a/controllers/mhi_qti.c
++++ b/controllers/mhi_qti.c
+@@ -430,6 +430,7 @@
+ 	return ret;
+ }
+ 
++#ifdef CONFIG_PM_SLEEP
+ static int mhi_system_resume(struct device *dev)
+ {
+ 	struct mhi_controller *mhi_dev = dev_get_drvdata(dev);
+@@ -442,6 +443,7 @@
+ 
+ 	return 0;
+ }
++#endif /* CONFIG_PM_SLEEP */
+ 
+ static int mhi_runtime_suspend(struct device *dev)
+ {
