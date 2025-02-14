@@ -6,16 +6,13 @@ include $(TOPDIR)/rules.mk
 PKG_NAME:=luci-app-modem
 LUCI_TITLE:=LuCI support for Modem
 LUCI_PKGARCH:=all
-PKG_VERSION:=1.4.5
-PKG_RELEASE:=1
+PKG_VERSION:=1.4.4
 PKG_LICENSE:=GPLv3
 PKG_LINCESE_FILES:=LICENSE
 PKF_MAINTAINER:=Siriling <siriling@qq.com>
 LUCI_DEPENDS:=+luci-compat \
 		+kmod-usb2 +kmod-usb3 \
-		+kmod-usb-ohci \
-		+kmod-usb-uhci \
-		+kmod-usb-net-sierrawireless \
+		+kmod-usb-net-sierrawireless +kmod-usb-ohci \
 		+kmod-usb-serial-option +kmod-usb-serial +kmod-usb-serial-qualcomm \
 		+kmod-usb-net +kmod-usb-acm \
 		+kmod-usb-wdm +kmod-usb-net-qmi-wwan \
@@ -24,10 +21,9 @@ LUCI_DEPENDS:=+luci-compat \
 		+kmod-usb-net-rndis \
 		+kmod-usb-net-cdc-ncm +kmod-usb-net-huawei-cdc-ncm \
 		+usbutils \
-		+kmod-mhi-pcie \
+		+kmod-pcie_mhi \
 		+pciutils \
-		+quectel-cm \
-		+luci-proto-quectel \
+		+quectel-CM-5G \
 		+modemmanager \
 		+luci-proto-modemmanager \
 		+sms-tool \
