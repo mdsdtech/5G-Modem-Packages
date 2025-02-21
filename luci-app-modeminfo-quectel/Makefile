@@ -1,14 +1,14 @@
 # Define the package information
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=luci-app-modeminfo
+PKG_NAME:=luci-app-modeminfo-quectel
 PKG_VERSION:=1.0
 PKG_RELEASE:=1
 
 PKG_MAINTAINER:=YiZhen Choo <yizhen.c02@gmail.com>
 PKG_LICENSE:=GPL-3.0
 
-LUCI_TITLE:=LuCI App for Modem Information
+LUCI_TITLE:=LuCI App for Modem Information Quectel
 LUCI_DESCRIPTION:=This LuCI app provides modem information in a web interface.
 LUCI_DEPENDS:=+luci +sms-tool +kmod-usb-serial-option
 
