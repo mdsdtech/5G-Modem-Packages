@@ -223,6 +223,13 @@
                 "data_interface":"pcie",
                 "define_connect":"1",
                 "modes":["qmi","mbim"]
+            },
+            "tw99175":{
+                "manufacturer":"foxconn",
+                "platform":"qualcomm",
+                "data_interface":"pcie",
+                "define_connect":"1",
+                "modes":["qmi","gobinet","mbim"]
             }
         },
         "device":{
@@ -252,6 +259,12 @@
                 "mediatek":{
                     "vendor_id":["0e8d"],
                     "product_id":["7126","7127"]
+                }
+            },
+            "foxconn":{
+                "qualcomm":{
+                    "vendor_id":["105b"],
+                    "product_id":["e0ab"]
                 }
             },
             "meig":{
