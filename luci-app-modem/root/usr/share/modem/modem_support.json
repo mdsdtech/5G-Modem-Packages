@@ -224,7 +224,7 @@
                 "define_connect":"1",
                 "modes":["qmi","mbim"]
             },
-            "tw99175":{
+            "t99w175":{
                 "manufacturer":"foxconn",
                 "platform":"qualcomm",
                 "data_interface":"pcie",
