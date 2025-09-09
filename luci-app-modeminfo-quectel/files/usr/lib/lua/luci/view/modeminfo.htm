@@ -182,21 +182,33 @@
         </td>
     </tr>
     <tr>
-        <td style="width: 33%; padding: 10px;"><strong>PCI:</strong></td>
-        <td id="pci-combined" style="padding: 10px;">
-            <span id="pcid">Loading...</span>, <span id="nr5gpcid">Loading...</span>
+        <td style="width: 33%; padding: 10px;"><strong>PCC: (Band / PCI / EARFCN)</strong></td>
+        <td id="pcc_td" style="padding: 10px;">
+            <span id="pcc">Loading...</span>
         </td>
     </tr>
     <tr>
-        <td style="width: 33%; padding: 10px;"><strong>Channel:</strong></td>
-        <td id="pci-combined" style="padding: 10px;">
-            <span id="lteearfcn">Loading...</span>, <span id="nr5gearfcn">Loading...</span>
+        <td style="width: 33%; padding: 10px;"><strong>SCC 1:</strong></td>
+        <td id="scc1_td" style="padding: 10px;">
+            <span id="scc1">Loading...</span>
         </td>
     </tr>
-    <tr></tr>
-        <td style="width: 33%; padding: 10px;"><strong>Band:</strong></td>
-        <td id="band-combined" style="padding: 10px;">
-            <span id="lteband">Loading...</span>, <span id="nr5gband">Loading...</span>
+    <tr>
+        <td style="width: 33%; padding: 10px;"><strong>SCC 2:</strong></td>
+        <td id="scc2_td" style="padding: 10px;">
+            <span id="scc2">Loading...</span>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 33%; padding: 10px;"><strong>SCC 3:</strong></td>
+        <td id="scc3_td" style="padding: 10px;">
+            <span id="scc3">Loading...</span>
+        </td>
+    </tr>
+    <tr>
+        <td style="width: 33%; padding: 10px;"><strong>SCC 4:</strong></td>
+        <td id="scc4_td" style="padding: 10px;">
+            <span id="scc4">Loading...</span>
         </td>
     </tr>
 </table>
@@ -325,12 +337,11 @@ function updateModemInfo() {
             document.getElementById('mnc').innerText = data["LTE MNC"] || "No Signal";
             document.getElementById('cellid').innerText = data["LTE Cell ID"] || "No Signal";
             document.getElementById('deccellid').innerText = data["LTE Cell ID (Dec)"] || "No Signal";
-            document.getElementById('pcid').innerText = data["LTE PCID"] || "No Signal";
-            document.getElementById('lteearfcn').innerText = data["LTE EARFCN"] || "No Signal";
-            document.getElementById('lteband').innerText = data["LTE Band"] || "No Signal";
-            document.getElementById('nr5gpcid').innerText = data["NR5G PCID"] || "No Signal";
-            document.getElementById('nr5gearfcn').innerText = data["NR5G EARFCN"] || "No Signal";
-            document.getElementById('nr5gband').innerText = data["NR5G Band"] || "No Signal";
+            document.getElementById('pcc').innerText = data["PCC"] || "-";
+            document.getElementById('scc1').innerText = data["SCC1"] || "-";
+            document.getElementById('scc2').innerText = data["SCC2"] || "-";
+            document.getElementById('scc3').innerText = data["SCC3"] || "-";
+            document.getElementById('scc4').innerText = data["SCC4"] || "-";
 
             // Update progress bars for relevant metrics
             const csqper = parseFloat(data["Signal Strength"]);
