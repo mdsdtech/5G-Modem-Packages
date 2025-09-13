@@ -2,7 +2,7 @@ module("luci.controller.modeminfo", package.seeall)
 
 function index()
     -- Create a new entry under the "Modem" section
-    entry({"admin", "modem", "modeminfo"}, call("action_modeminfo"), _("Modem Info"), 20).dependent = false
+    entry({"admin", "modem", "modeminfo"}, call("action_modeminfo"), _("QC Signal"), 20).dependent = false
     entry({"admin", "modem", "modeminfo", "get_info"}, call("get_modem_info")).dependent = false  -- New endpoint for AJAX
     entry({"admin", "modem", "modeminfo", "set_refresh"}, call("set_refresh")).dependent = false
     entry({"admin", "modem", "modeminfo", "get_ports_info"}, call("get_ports_info")).dependent = false
