@@ -12,7 +12,7 @@ function index()
         return
     end
 
-	entry({"admin", "network", "modem"}, alias("admin", "network", "modem", "modem_info"), translate("Modem"), 100).dependent = true
+	entry({"admin", "network", "modem"}, alias("admin", "network", "modem", "modem_info"), translate("Mobile Modem"), 100).dependent = true
 
 	--模块信息
 	entry({"admin", "network", "modem", "modem_info"}, template("modem/modem_info"), translate("Modem Information"),10).leaf = true
