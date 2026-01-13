@@ -1,0 +1,152 @@
+********* General Command *********;ATI
+Module Info;ATI
+Check SIM card status;AT+CPIN?
+Check network signal quality (4G);AT+CSQ
+Check network signal quality (5G);AT+CESQ
+Network information;AT+COPS?
+PDP information;AT+CGDCONT?
+QPDP IP Address;AT+CGPADDR
+Check IMEI (CGSN);AT+CGSN
+Check IMEI (GSN);AT+GSN
+View current voltage;AT+CBC
+Airplane Mode On;AT+CFUN=0
+Airplane Mode Off;AT+CFUN=1
+Reboot Module;AT+CFUN=1,1
+********* Quectel Qualcomm Chipset *********;ATI
+Immediate Power Off (Must wait 60s);AT+QPOWD=0
+Normal Power Off (Must wait 60s);AT+QPOWD=1
+SIM card status reporting;AT+QSIMSTAT?
+Set SIM Slot 1;AT+QUIMSLOT=1
+Set SIM Slot 2;AT+QUIMSLOT=2
+Check Band Info;AT+QNWINFO
+Check CA (Carrier Aggregation) Band;AT+QCAINFO
+Check Current Protocol Mode;AT+QCFG="usbnet"
+Change to QMI/GobiNet Mode;AT+QCFG="usbnet",0
+Change to ECM Mode;AT+QCFG="usbnet",1
+Change to MBIM Mode;AT+QCFG="usbnet",2
+Change to RNDIS Mode;AT+QCFG="usbnet",3
+Change to NCM Mode;AT+QCFG="usbnet",5
+Lock 4G B28;AT+QNWPREFCFG="lte_band",28
+Lock 4G B1,3,7,8,28;AT+QNWPREFCFG="lte_band",1:3:7:8:28
+Reset Lock 4G;AT+QNWPREFCFG="lte_band"
+Lock Prefer 4G;AT+QNWPREFCFG="mode_pref",LTE
+Lock Prefer 5G;AT+QNWPREFCFG="mode_pref",NR5G
+Lock Prefer 5G NSA;AT+QNWPREFCFG="mode_pref",NR5G-NSA
+Lock Prefer 5G SA;AT+QNWPREFCFG="mode_pref",NR5G-SA
+Reset Lock Band (Auto);AT+QNWPREFCFG="mode_pref",AUTO
+Check IMEI;AT+EGMR=0,7
+Change IMEI;AT+EGMR=1,7,"Set IMEI here"
+Check Temperature;AT+QTEMP
+Switch to USB communication port;AT+QCFG="data_interface",0,0
+Switch to PCIE communication port;AT+QCFG="data_interface",1,0
+View current USB speed;AT+QCFG="usbspeed"
+Change to USB 2.0 speed;AT+QCFG="usbspeed","20"
+Change to USB 3.1 Gen1 (5Gbps) speed;AT+QCFG="usbspeed","311"
+Change to USB 3.1 Gen1 (10Gbps) speed;AT+QCFG="usbspeed","312"
+Reset module to Factory;AT+QCFG="ResetFactory"
+********* Quectel UniSoC Chipset *********;ATI
+Report SIM Card Status;AT+QSIMSTAT?
+Set Active SIM to Slot 1;AT+QUIMSLOT=1
+Set Active SIM to Slot 2;AT+QUIMSLOT=2
+Check Network Info;AT+QNWINFO
+Check CA Parameters;AT+QCAINFO
+Check Current Dialing Mode;AT+QCFG="usbnet"
+Set ECM Dialing Mode;AT+QCFG="usbnet",1
+Set MBIM Dialing Mode;AT+QCFG="usbnet",2
+Set RNDIS Dialing Mode;AT+QCFG="usbnet",3
+Set NCM Dialing Mode;AT+QCFG="usbnet",5
+Lock 4G;AT+QNWPREFCFG="mode_pref",LTE
+Lock 5G;AT+QNWPREFCFG="mode_pref",NR5G
+Lock 5G NSA;AT+QNWPREFCFG="mode_pref",NR5G-NSA
+Lock 5G SA;AT+QNWPREFCFG="mode_pref",NR5G-SA
+Reset Network Search (Auto);AT+QNWPREFCFG="mode_pref",AUTO
+Check Module IMEI;AT+EGMR=0,7
+Change Module IMEI;AT+EGMR=1,7,"Set IMEI Here"
+Get Module Temperature;AT+QTEMP
+Switch to USB Communication Port;AT+QCFG="data_interface",0,0
+Switch to PCIe Communication Port;AT+QCFG="data_interface",1,0
+Check Current USB Speed;AT+QCFG="usbspeed"
+Switch to USB 2.0;AT+QCFG="usbspeed","20"
+Switch to USB 3.1 Gen1 (5Gbps);AT+QCFG="usbspeed","311"
+Switch to USB 3.1 Gen1 (10Gbps);AT+QCFG="usbspeed","312"
+Reset Module;AT+QCFG="ResetFactory"
+********* Fibocom Qualcomm Chipset *********;ATI
+Set Active SIM to Slot 1;AT+GTDUALSIM=0
+Set Active SIM to Slot 2;AT+GTDUALSIM=1
+ECM Manual Dialing;AT+GTRNDIS=1,1
+ECM Disconnect Dialing;AT+GTRNDIS=0,1
+Check Current Port Mode;AT+GTUSBMODE?
+Set QMI/GobiNet Dialing Mode;AT+GTUSBMODE=32
+Set ECM Dialing Mode;AT+GTUSBMODE=18
+Set MBIM Dialing Mode;AT+GTUSBMODE=30
+Set RNDIS Dialing Mode;AT+GTUSBMODE=24
+Set NCM Dialing Mode;AT+GTUSBMODE=18
+Lock 4G;AT+GTACT=2
+Lock 5G;AT+GTACT=14
+Reset Network Search (Auto);AT+GTACT=20
+Check Current Network Type;AT+PSRAT?
+Check Module IMEI;AT+GTSN=0,7
+Change Module IMEI;AT+GTSN=1,7,"Set IMEI Here"
+Report Current BBIC Temperature;AT+MTSM=1,6
+Report Current RF Temperature;AT+MTSM=1,7
+Reboot Module;AT+CFUN=15
+********* Fibocom UniSoC Chipset *********;ATI
+Set Active SIM to Slot 1;AT+GTDUALSIM=0
+Set Active SIM to Slot 2;AT+GTDUALSIM=1
+ECM Manual Dialing;AT+GTRNDIS=1,1
+ECM Disconnect Dialing;AT+GTRNDIS=0,1
+Check Current Port Mode;AT+GTUSBMODE?
+Set ECM Dialing Mode;AT+GTUSBMODE=18
+Set MBIM Dialing Mode;AT+GTUSBMODE=30
+Set RNDIS Dialing Mode;AT+GTUSBMODE=24
+Set NCM Dialing Mode;AT+GTUSBMODE=18
+Lock 4G;AT+GTACT=2
+Lock 5G;AT+GTACT=14
+Reset Network Search (Auto);AT+GTACT=20
+Check Current Network Type;AT+PSRAT?
+Check Module IMEI;AT+GTSN=0,7
+Change Module IMEI;AT+GTSN=1,7,"Set IMEI Here"
+Report Current BBIC Temperature;AT+MTSM=1,6
+Report Current RF Temperature;AT+MTSM=1,7
+Reboot Module;AT+CFUN=15
+********* Fibocom Mediatek Chipset *********;ATI
+Set Active SIM to Slot 1;AT+GTDUALSIM=0
+Set Active SIM to Slot 2;AT+GTDUALSIM=1
+Manually Set APN;AT+CGDCONT=3,"IPV4V6","Set APN Here"
+Manual Dial;AT+CGACT=1,3
+Stop Dialing;AT+CGACT=0,3
+Check Current Port Mode;AT+GTUSBMODE?
+Set RNDIS Dialing Mode (40);AT+GTUSBMODE=40
+Set RNDIS Dialing Mode (41);AT+GTUSBMODE=41
+Lock 4G;AT+GTACT=2
+Lock 5G;AT+GTACT=14
+Reset Network Search (Auto);AT+GTACT=20
+Check Current Network Type;AT+PSRAT?
+Check CA Cell Info;AT+GTCAINFO?
+Check Module IMEI;AT+GTSN=0,7
+Change Module IMEI;AT+GTSN=1,7,"Set IMEI Here"
+Unlock FCC;AT+GTFCCLOCKMODE=0
+Unlock eSIM;AT+GTESIMCFG=0,0,0
+Disable Thermal Control;AT+GTTHERMAL=0
+Get Current Temperature;AT+GTSENRDTEMP=0
+Reboot Module;AT+CFUN=15
+********* MeiG Qualcomm Chipset *********;ATI
+Report SIM Card Status;AT^SIMSLOTURC=1
+Get SIM Slot Status;AT^SIMSLOT?
+Set Active SIM to Slot 1;AT^SIMSLOT=1
+Set Active SIM to Slot 2;AT^SIMSLOT=2
+Check Network Info;AT^SYSINFOEX
+Check CA Cell Info;AT^CELLINFO=3
+Check Current Dialing Mode;AT+SER?
+Set QMI/GobiNet Dialing Mode;AT+SER=1,1
+Set ECM Dialing Mode;AT+SER=2,1
+Set MBIM Dialing Mode;AT+SER=3,1
+Set RNDIS Dialing Mode;AT+SER=3,1
+Set NCM Dialing Mode;AT+SER=2,1
+Lock 4G;AT^SYSCFGEX="03",all,0,2,all,all,all,all,1
+Lock 5G;AT^SYSCFGEX="04",all,0,2,all,all,all,all,1
+Reset Network Search (Auto);AT^SYSCFGEX="00",all,0,2,all,all,all,all,1
+Check Module IMEI;AT+LCTSN=0,7
+Change Module IMEI;AT+LCTSN=1,7,"Set IMEI Here"
+Get Module Temperature;AT+TEMP
+Reboot Module;AT+RESET
