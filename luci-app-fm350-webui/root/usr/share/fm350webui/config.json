@@ -1,0 +1,14 @@
+{
+  "WEBSOCKET": {
+    "HOST": "0.0.0.0",
+    "PORT": 8765
+  },
+  "HTTP": {
+    "PORT": 8001
+  },
+  "SERIAL": {
+    "PORT": "/dev/ttyUSB3",
+    "MODE": "tom_modem",
+    "FEATURE": "UBUS"
+  }
+}

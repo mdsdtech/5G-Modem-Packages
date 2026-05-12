@@ -1,0 +1,131 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: FM350 WebUI\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-15 12:00+0800\n"
+"PO-Revision-Date: 2024-06-15 12:00+0800\n"
+"Last-Translator: Your Name <your.email@example.com>\n"
+"Language-Team: Chinese\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.0\n"
+
+msgid "FM350 WebUI Configuration"
+msgstr "FM350 WebUI 配置"
+
+msgid "Configure the FM350 WebUI service settings"
+msgstr "配置 FM350 WebUI 服务设置"
+
+msgid "Service Settings"
+msgstr "服务设置"
+
+msgid "Enable Service"
+msgstr "启用服务"
+
+msgid "WebUI Port"
+msgstr "WebUI 端口"
+
+msgid "Default port is 8001. Change only if port conflicts occur."
+msgstr "默认端口为8001。仅在端口冲突时修改。"
+
+msgid "Boot Delay (seconds)"
+msgstr "开机启动延时（秒）"
+
+msgid "Delay service startup after system boot (0 for immediate start)"
+msgstr "系统启动后延迟服务启动（0表示立即启动）"
+
+msgid "Service Status"
+msgstr "服务状态"
+
+msgid "Running"
+msgstr "运行中"
+
+msgid "Stopped"
+msgstr "已停止"
+
+msgid "Open in New Tab"
+msgstr "在新标签页打开"
+
+msgid "Service Control"
+msgstr "服务控制"
+
+msgid "Status:"
+msgstr "状态："
+
+msgid "Access URL:"
+msgstr "访问URL："
+
+msgid "Note"
+msgstr "注意"
+
+msgid "Boot delay only applies to automatic startup during system boot. Manual operations are immediate."
+msgstr "开机启动延时仅适用于系统启动时的自动启动。手动操作将立即执行。"
+
+msgid "FM350 WebUI"
+msgstr "FM350 WebUI"
+
+msgid "Configuration"
+msgstr "配置"
+
+msgid "Web Panel"
+msgstr "网页面板"
+
+msgid "Open Panel"
+msgstr "打开面板"
+
+msgid "Open Web Panel"
+msgstr "打开网页面板"
+
+msgid "The FM350 WebUI service is not running. Please start the service to access the panel."
+msgstr "FM350 WebUI 服务未运行。请启动服务以访问面板。"
+
+msgid "Service Status:"
+msgstr "服务状态："
+
+msgid "Configuration Settings"
+msgstr "配置设置"
+
+msgid "Restart Service"
+msgstr "重启服务"
+
+msgid "Stop Service"
+msgstr "停止服务"
+
+msgid "Start Service"
+msgstr "启动服务"
+
+msgid "FM350 WebUI Panel"
+msgstr "FM350 WebUI 面板"
+
+msgid "Opening WebUI"
+msgstr "正在打开 WebUI"
+
+msgid "Opening WebUI in new tab..."
+msgstr "正在新标签页中打开 WebUI..."
+
+msgid "Click here if the new tab doesn't open"
+msgstr "如果新标签页没有打开，请点击这里"
+
+msgid "Detected Device"
+msgstr "检测到的设备"
+
+msgid "Device:"
+msgstr "设备："
+
+msgid "Supported device detected"
+msgstr "检测到支持的设备"
+
+msgid "No supported device detected. Plugin will not be loaded."
+msgstr "未检测到支持的设备。插件将不会加载。"
+
+msgid "Device Not Detected"
+msgstr "设备未检测到"
+
+msgid "The supported device (Fibocom FM350-GL) was not detected. Please ensure the device is connected."
+msgstr "未检测到支持的设备 (Fibocom FM350-GL)。请确保设备已连接。"
+
+msgid "Supported Device ID:"
+msgstr "支持的设备ID："

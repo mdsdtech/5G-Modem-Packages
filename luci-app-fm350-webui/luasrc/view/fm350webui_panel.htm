@@ -1,0 +1,101 @@
+<%+header%>
+
+<div class="cbi-map">
+    <h2 name="content"><%:FM350 WebUI Panel%></h2>
+    
+    <div class="cbi-section">
+        <div class="cbi-section-node">
+            <% 
+            local port = luci.model.uci.cursor():get("fm350webui", "main", "port") or "8001"
+            local ip = luci.http.getenv("SERVER_ADDR")
+            if ip:match(":") then
+                ip = "["..ip.."]"
+            end
+            local url = "http://" .. ip .. ":" .. port
+            %>
+            
+            <div id="fm350webui-alert" class="alert-message <% if running then %>success<% else %>error<% end %>">
+                <div style="margin-bottom:10px;">
+                    <strong><%:Service Status:%></strong> 
+                    <span id="fm350webui-status" style="margin-left:10px">
+                        <% if running then %>
+                            <span style="color:green; font-weight:bold"><%:Running%></span>
+                        <% else %>
+                            <span style="color:red; font-weight:bold"><%:Stopped%></span>
+                        <% end %>
+                    </span>
+                </div>
+                
+                <div style="margin-bottom:10px; font-size:0.9em;">
+                    <strong><%:Access URL:%></strong> <%=url%>
+                </div>
+                
+                <% if not running then %>
+                    <p style="margin-top:10px"><%:The FM350 WebUI service is not running. Please start the service to access the panel.%></p>
+                <% end %>
+            </div>
+            
+            <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:15px;">
+                <a class="btn cbi-button cbi-button-apply" href="<%=url%>" target="_blank">
+                    <%:Open in New Tab%>
+                </a>
+                
+                <a class="btn cbi-button cbi-button-action" href="<%=luci.dispatcher.build_url('admin/services/fm350webui/config/start')%>">
+                    <%:Start Service%>
+                </a>
+                
+                <a class="btn cbi-button cbi-button-reset" href="<%=luci.dispatcher.build_url('admin/services/fm350webui/config/restart')%>">
+                    <%:Restart Service%>
+                </a>
+                
+                <a class="btn cbi-button cbi-button-negative" href="<%=luci.dispatcher.build_url('admin/services/fm350webui/config/stop')%>">
+                    <%:Stop Service%>
+                </a>
+            </div>
+            
+            <% if running then %>
+            <div style="border:1px solid var(--border-color); border-radius:4px; overflow:hidden; height:75vh; margin-top:15px; box-shadow: 0 0 0.5rem 0 rgba(0,0,0,0.1);">
+                <iframe 
+                    src="<%=url%>" 
+                    style="width:100%; height:100%; border:none;"
+                    title="FM350 WebUI Panel"
+                ></iframe>
+            </div>
+            <% end %>
+        </div>
+    </div>
+</div>
+
+<script>
+    const statusUrl = '<%=luci.dispatcher.build_url("admin/services/fm350webui/status")%>';
+    
+    function refreshStatus() {
+        fetch(statusUrl)
+            .then(response => response.json())
+            .then(data => {
+                const statusEl = document.getElementById('fm350webui-status');
+                const alertBox = document.getElementById('fm350webui-alert');
+                const iframeContainer = document.querySelector('.cbi-section-node > div:last-child');
+                
+                if (statusEl) {
+                    if (data.running) {
+                        statusEl.innerHTML = "<span style='color:green; font-weight:bold'><%:Running%></span>";
+                    } else {
+                        statusEl.innerHTML = "<span style='color:red; font-weight:bold'><%:Stopped%></span>";
+                    }
+                }
+                
+                if (alertBox) {
+                    alertBox.className = data.running ? 
+                        'alert-message success' : 
+                        'alert-message error';
+                }
+                
+            });
+    }
+    
+    setTimeout(refreshStatus, 100);
+    setInterval(refreshStatus, 5000);
+</script>
+
+<%+footer%>
